@@ -48,6 +48,20 @@ public class Main extends JFrame{
 
     });
 
+    inventory.addActionListener(new ActionListener(){
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JPanel inventory = Inventory.newJPanel();
+            frame.setContentPane(inventory);
+            frame.invalidate();
+            frame.validate();
+ 
+        }
+
+    });
+
+
 
     }
 }

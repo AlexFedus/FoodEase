@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Main {
+public class Main extends JFrame{
     
     public static void main(String args[]){
        JFrame frame = new JFrame("Food-ease");
@@ -39,8 +39,8 @@ public class Main {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JPanel clock = new JPanel();
-            frame.setContentPane(clock);
+            JPanel Clock = new JPanel();
+            frame.setContentPane(Clock);
             frame.invalidate();
             frame.validate();
 

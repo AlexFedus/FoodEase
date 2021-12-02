@@ -39,15 +39,13 @@ public class Main extends JFrame{
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            JPanel Clock = new JPanel();
-            frame.setContentPane(Clock);
+            JPanel clock = Clock.newJPanel();
+            frame.setContentPane(clock);
             frame.invalidate();
             frame.validate();
-
-            
+ 
         }
 
-       
     });
 
 

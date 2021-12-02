@@ -61,6 +61,44 @@ public class Main extends JFrame{
 
     });
 
+    kitchen.addActionListener(new ActionListener(){
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JPanel kitchen = Kitchen.newJPanel();
+            frame.setContentPane(kitchen);
+            frame.invalidate();
+            frame.validate();
+ 
+        }
+
+    });
+
+    orders.addActionListener(new ActionListener(){
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JPanel orders = Orders.newJPanel();
+            frame.setContentPane(orders);
+            frame.invalidate();
+            frame.validate();
+ 
+        }
+
+    });
+
+    tables.addActionListener(new ActionListener(){
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JPanel tables = Tables.newJPanel();
+            frame.setContentPane(tables);
+            frame.invalidate();
+            frame.validate();
+ 
+        }
+
+    });
 
 
     }

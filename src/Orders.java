@@ -6,6 +6,6 @@ public class Orders extends JPanel {
         JPanel orders = new JPanel();
         JButton button = new JButton("test");
         orders.add(button);
-        return clock;
+        return orders;
     }
  }

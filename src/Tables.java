@@ -83,10 +83,329 @@ public class Tables extends JPanel {
             
         });
 
-        
-            
 
-        
+        table1.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table2.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table3.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table4.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table5.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table6.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table7.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table8.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table9.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table10.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table11.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table12.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table13.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table14.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table15.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table16.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+
+        table17.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table18.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table19.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table20.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table21.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table22.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table23.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table24.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+        table25.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
+                Main.frame.validate();
+                
+            }
+
+        });
+ 
+
+
+
+
+
 
 
 

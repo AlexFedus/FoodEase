@@ -1,9 +1,11 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Hashtable;
 import java.awt.*;
 
 public class Clock extends JPanel {
+    static Hashtable<String, String> currentWorking = new Hashtable<>();
 
     public static JPanel newJPanel() {
         JPanel clock = new JPanel();
@@ -13,6 +15,7 @@ public class Clock extends JPanel {
         JTextField id = new JTextField(20);
         JButton clockIn = new JButton("Clock In");
         JButton clockOut = new JButton("Clock Out");
+        JButton workers = new JButton ("Current Workers");
 
         
         clock.add(button);
@@ -20,6 +23,7 @@ public class Clock extends JPanel {
         clock.add(id);
         clock.add(clockIn);
         clock.add(clockOut);
+        clock.add(workers);
 
         button.addActionListener(new ActionListener(){
 
@@ -34,6 +38,60 @@ public class Clock extends JPanel {
             
         });
 
+        clockIn.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               String empNum = id.getText();
+                currentWorking.put(empNum, empNum);
+
+                
+            }
+
+        });
+
+        clockOut.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               String empNum = id.getText();
+                currentWorking.remove(empNum);
+
+                
+            }
+
+        });
+
+        workers.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel CurrentWorkers = new JPanel();
+                JLabel workerIds = new JLabel(currentWorking.toString());
+                JButton back = new JButton("Back");
+                CurrentWorkers.add(back);
+                CurrentWorkers.add(workerIds);
+                Main.frame.setContentPane(CurrentWorkers);
+                Main.frame.invalidate();
+                Main.frame.validate();
+
+                back.addActionListener(new ActionListener(){
+
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        JPanel back = Clock.newJPanel();
+                        Main.frame.setContentPane(back);
+                        Main.frame.invalidate();
+                        Main.frame.validate();
+                        
+                    }
+
+                });
+            
+                
+            }
+
+        });
         
 
         return clock;

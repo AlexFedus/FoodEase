@@ -4,7 +4,6 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 
 public class Tables extends JPanel {
-   
 
     public static JPanel newJPanel() {
         JPanel tables = new JPanel();
@@ -90,12 +89,6 @@ public class Tables extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JPanel table1View = TableView.newJPanel();
-                String getStatus1 = TableView.status;
-                final String getStatus1A = getStatus1;
-                
-                JLabel currentStatus1 = new JLabel("Current Status: " + getStatus1A, SwingConstants.CENTER);
-                table1View.add(currentStatus1);
-
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
@@ -108,14 +101,9 @@ public class Tables extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JPanel table2View = TableView.newJPanel();
-                String getStatus2 = TableView.status;
-                
-                JLabel currentStatus2 = new JLabel("Current Status: " + getStatus2, SwingConstants.CENTER);
-                table2View.add(currentStatus2);
-
-                Main.frame.setContentPane(table2View);
-                Main.frame.setContentPane(table2View);
+                JPanel table1View = TableView.newJPanel();
+                Main.frame.setContentPane(table1View);
+                Main.frame.setContentPane(table1View);
                 Main.frame.validate();
                 
             }

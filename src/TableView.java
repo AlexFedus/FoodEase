@@ -9,7 +9,7 @@ import java.awt.event.ItemListener;
 
 
 public class TableView extends JPanel {
-    static String status = "";
+    static String status = "Available";
 
     public static JPanel newJPanel() {
         JPanel tables = new JPanel();
@@ -29,7 +29,7 @@ public class TableView extends JPanel {
 
        
 
-        JLabel currentStatus = new JLabel("Current Status: " + status, SwingConstants.CENTER);
+        //JLabel currentStatus = new JLabel("Current Status: " + status, SwingConstants.CENTER);
 
 
 
@@ -40,7 +40,7 @@ public class TableView extends JPanel {
         tables.add(availability);
         tables.add(choose);
         tables.add(submit);
-        tables.add(currentStatus);
+        //tables.add(currentStatus);
        
 
         button.addActionListener(new ActionListener(){
@@ -55,7 +55,8 @@ public class TableView extends JPanel {
             }
             
         });
-
+        
+       
         submit.addActionListener(new ActionListener(){
 
             @Override
@@ -74,6 +75,7 @@ public class TableView extends JPanel {
 
         });
         
+    
 
         return tables;
 

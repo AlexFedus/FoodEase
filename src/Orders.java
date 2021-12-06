@@ -1,7 +1,6 @@
 import java.awt.event.*;
 import java.util.PriorityQueue;
 import java.util.Queue;
-
 import javax.swing.*;
 
 
@@ -42,9 +41,4 @@ public class Orders extends JPanel {
             
         return orders;
     }
-    
-    private static JTextField newOrder(String s) {
-    	JTextField order = new JTextField(s);
-    	return order;
-    }
-    }
+}

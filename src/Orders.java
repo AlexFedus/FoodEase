@@ -1,16 +1,21 @@
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
+import javax.swing.*;
+
 
 
 public class Orders extends JPanel {
-
+	JTextField[] Orders = new JTextField[15];
+	Queue<JTextField> FoodQueue = new PriorityQueue<JTextField>();
+	
     public static JPanel newJPanel() {
         JPanel orders = new JPanel();
         JButton button = new JButton("Home");
+        JButton button1 = new JButton("New Order");
         orders.add(button);
+        orders.add(button1);
 
         button.addActionListener(new ActionListener(){
 
@@ -24,12 +29,22 @@ public class Orders extends JPanel {
             }
             
         });
-            
         
+        button1.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel orderview = OrderView.newJPanel();
+				
+			}
+        	
+        });
+            
         return orders;
-
-
-
     }
- }
+    
+    private static JTextField newOrder(String s) {
+    	JTextField order = new JTextField(s);
+    	return order;
+    }
+    }

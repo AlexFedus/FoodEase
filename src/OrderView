@@ -1,0 +1,10 @@
+import javax.swing.JPanel;
+
+public class OrderView extends JPanel {
+	
+	public static JPanel newJPanel() {
+		
+		JPanel orders = new JPanel();
+		return orders;
+	}
+}

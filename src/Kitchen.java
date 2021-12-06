@@ -7,6 +7,7 @@ public class Kitchen extends JPanel {
     public static JPanel newJPanel() {
         JPanel kitchen = new JPanel();
         JButton button = new JButton("Home");
+        JButton button1 = new JButton("Finish Order");
         kitchen.add(button);
 
         button.addActionListener(new ActionListener(){
@@ -24,4 +25,6 @@ public class Kitchen extends JPanel {
 
         return kitchen;
     }
+
+
  }

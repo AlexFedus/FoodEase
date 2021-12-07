@@ -4,9 +4,20 @@ import java.awt.event.ActionListener;
 import java.util.Hashtable;
 import java.awt.*;
 
+/**
+ * 
+ * This class contains the method responsible for the clock Jpanel
+ * 
+ */
 public class Clock extends JPanel {
     static Hashtable<String, String> currentWorking = new Hashtable<>();
 
+    
+    /** 
+     * Sets up the clock JPanel that can be accessed from the home page
+     * 
+     * @return JPanel
+     */
     public static JPanel newJPanel() {
         JPanel clock = new JPanel();
         clock.setLayout(new FlowLayout());

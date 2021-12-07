@@ -2,15 +2,26 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 
 
+/**
+ * 
+ * This class contains the method responsible for the TableView Jpanel
+ * 
+ */
 
 public class TableView extends JPanel {
     static String status = "";
 
+    
+    /** 
+     * Sets up JPanel for each of the tables and can be used to change availability
+     * 
+     * Not currently working properly
+     * 
+     * @return JPanel
+     */
     public static JPanel newJPanel() {
         JPanel tables = new JPanel();
         tables.setLayout(new GridLayout(5,2));
@@ -19,23 +30,14 @@ public class TableView extends JPanel {
         availability.setFont(new Font("Serif", Font.PLAIN, 20));
 
         JButton submit = new JButton("Submit");
-        
-
         String[] choices = {
             "Available", "Occupied"
         };
         
         JComboBox choose = new JComboBox(choices);
-
-       
-
         JLabel currentStatus = new JLabel("Current Status: " + status, SwingConstants.CENTER);
 
-
-
-    
-       
-
+        // Adds buttons to JPanel
         tables.add(button);
         tables.add(availability);
         tables.add(choose);
@@ -43,6 +45,7 @@ public class TableView extends JPanel {
         tables.add(currentStatus);
        
 
+        //ActionListener to go 'back'/ to the Tables Jpanel
         button.addActionListener(new ActionListener(){
 
             @Override
@@ -56,6 +59,7 @@ public class TableView extends JPanel {
             
         });
 
+        //ActionListenr to see what was selected
         submit.addActionListener(new ActionListener(){
 
             @Override

@@ -7,10 +7,22 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * 
+ * This class contains the method responsible for the home page Jpanel
+ * 
+ */
 public class HomePage extends JPanel{
+    
+    /** 
+     * Sets up the JPanel for the homepage of the project
+     * 
+     * @return JPanel
+     */
     public static JPanel newJPanel(){
+        //Sets up JPanel
         JPanel content = new JPanel();
-       content.setLayout(new BorderLayout());
+        content.setLayout(new BorderLayout());
         content.setBackground(Color.GRAY);
 
         JButton clockIn = new JButton("Clock In/Clock Out");
@@ -25,10 +37,13 @@ public class HomePage extends JPanel{
         content.add(kitchen, BorderLayout.EAST);
         content.add(inventory, BorderLayout.SOUTH);
 
+        //Adds content to the JPanel
         Main.frame.add(content);
         Main.frame.setLocation(200, 200);
         Main.frame.setVisible(true);
 
+
+        //ActionListener for clock button
         clockIn.addActionListener(new ActionListener() {
 
             @Override
@@ -41,7 +56,8 @@ public class HomePage extends JPanel{
             }
 
         });
-            
+        
+        // ActionListener for inventory button
         inventory.addActionListener(new ActionListener(){
 
             @Override
@@ -55,6 +71,7 @@ public class HomePage extends JPanel{
     
         });
 
+        //ActionListener for Kitchen button
         kitchen.addActionListener(new ActionListener(){
 
             @Override
@@ -68,6 +85,7 @@ public class HomePage extends JPanel{
     
         });
 
+        //ActionListener for orders button
         orders.addActionListener(new ActionListener(){
 
             @Override
@@ -81,6 +99,7 @@ public class HomePage extends JPanel{
     
         });
 
+        //ActionListener for tables button
         tables.addActionListener(new ActionListener(){
 
             @Override

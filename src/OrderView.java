@@ -1,4 +1,5 @@
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 public class OrderView extends JPanel {
 	
@@ -9,7 +10,7 @@ public class OrderView extends JPanel {
         JLabel text1 = new JLabel("Enter Table Number:");
         JTextField tableNum = new JTextField();
 
-        JLabel text2 = new JLabel("Enter Meals:")
+        JLabel text2 = new JLabel("Enter Meals:");
 
         JTextField Meal1 = new JTextField("Meal 1:");
         JTextField Meal2 = new JTextField("Meal 2:");

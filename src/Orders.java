@@ -33,8 +33,9 @@ public class Orders extends JPanel {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JPanel orderview = OrderView.newJPanel();
-				
+				JPanel orderView = OrderView.newJPanel();
+                Main.frame.setContentPane(orderView);
+                Main.frame.validate();
 			}
         	
         });

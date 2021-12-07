@@ -3,11 +3,24 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.*;
 
+/**
+ * 
+ * This class contains the method responsible for the Tables Jpanel
+ * 
+ */
 public class Tables extends JPanel {
 
+    
+    /** 
+     * Sets up the JPanels for table view that can be accessed from the homepage
+     * 
+     * @return JPanel
+     */
     public static JPanel newJPanel() {
         JPanel tables = new JPanel();
         tables.setLayout(new FlowLayout());
+
+        //Adds buttons for home and each table
         JButton button = new JButton("Home");
         JButton table1 = new JButton("1");
         JButton table2 = new JButton("2");
@@ -35,8 +48,8 @@ public class Tables extends JPanel {
         JButton table24 = new JButton("24");
         JButton table25 = new JButton("25");
 
+        //Adds buttons to the JPanel
         tables.add(button);
-
         tables.add(table1);
         tables.add(table2);
         tables.add(table3);
@@ -67,7 +80,9 @@ public class Tables extends JPanel {
     
 
 
-
+        /**
+         * Below is all the actionListeners for the home button and for each table
+         */
         
 
         button.addActionListener(new ActionListener(){
@@ -401,11 +416,6 @@ public class Tables extends JPanel {
 
         });
  
-
-
-
-
-
 
 
 

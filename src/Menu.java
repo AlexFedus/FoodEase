@@ -1,20 +1,21 @@
 import javax.swing.*;
-
-
+import java.awt.event.*;
 
 public class Menu {
-	//Create the menu bar.
+	// Create the menu bar.
 	public static JMenuBar newJMenuBar() {
 		JMenuBar menuBar = new JMenuBar();
 
-		//Add a JMenu
+		// Add a JMenu
 		JMenu starter = new JMenu("Starters");
 		JMenu maincourse = new JMenu("Main Courses");
-		JMenu desserts = new JMenu("Desserts"); 
+		JMenu desserts = new JMenu("Desserts");
+		JButton back = new JButton("Back");
 
 		menuBar.add(starter);
 		menuBar.add(maincourse);
 		menuBar.add(desserts);
+		menuBar.add(back);
 
 		// Now we want to fill each of the menus.
 		// Starters. This is a simple Menu, with five MenuItems.
@@ -32,11 +33,10 @@ public class Menu {
 		starter.add(salad);
 
 		// Main Courses
-		//Fish, Steak, Chicken, CheeseBurgers, Skillets, Sandwiches
+		// Fish, Steak, Chicken, CheeseBurgers, Skillets, Sandwiches
 
-
-		//Fish Menu
-		JMenu Fish =  new JMenu("Grilled Choice of Fish");
+		// Fish Menu
+		JMenu Fish = new JMenu("Grilled Choice of Fish");
 		JMenuItem salmon = new JMenuItem("Grilled Atlantic Salmon");
 		JMenuItem haddock = new JMenuItem("Grilled Haddock");
 		JMenuItem tilapia = new JMenuItem("Grilled Tilapia");
@@ -44,12 +44,12 @@ public class Menu {
 		Fish.add(haddock);
 		Fish.add(tilapia);
 
-		//Chicken Menu
-		JMenu Chicken =  new JMenu("Grilled 6oz Chicken Breast");
+		// Chicken Menu
+		JMenu Chicken = new JMenu("Grilled 6oz Chicken Breast");
 		JMenuItem chicken = new JMenuItem("Grilled Chicken");
 		Chicken.add(chicken);
 
-		//Burger Menu
+		// Burger Menu
 		JMenu CheeseBurger = new JMenu("CheeseBurger");
 		JMenuItem rareburg = new JMenuItem("Rare");
 		JMenuItem medrareburg = new JMenuItem("Medium-Rare");
@@ -62,7 +62,7 @@ public class Menu {
 		CheeseBurger.add(medwellburg);
 		CheeseBurger.add(welldoneburg);
 
-		//Steak menu
+		// Steak menu
 		JMenu Steak = new JMenu("8oz Sirloin Steak");
 		JMenuItem raresteak = new JMenuItem("Rare");
 		JMenuItem medraresteak = new JMenuItem("Medium-Rare");
@@ -75,7 +75,7 @@ public class Menu {
 		Steak.add(medwellsteak);
 		Steak.add(welldonesteak);
 
-		//Skillet menu
+		// Skillet menu
 		JMenu Skillets = new JMenu("Breakfast/Lunch/Dinner Skillets");
 		JMenuItem countryskillet = new JMenuItem("Country Skillet");
 		JMenuItem everythingskillet = new JMenuItem("Everything Skillet");
@@ -86,21 +86,21 @@ public class Menu {
 		Skillets.add(steakskillet);
 		Skillets.add(shrimpskillet);
 
-		//Sandwich menu
+		// Sandwich menu
 		JMenu Sandwiches = new JMenu("Sandwiches");
-		JMenuItem BTLSandwich =  new JMenuItem("BLT Sandwich");
-		JMenuItem TripleClubSandwich =  new JMenuItem("TripleClub Sandwich");
-		JMenuItem ChickenTenderMelt =  new JMenuItem("Chicken Tender Melt");
-		JMenuItem HamCheeseSandwich =  new JMenuItem("Ham & Cheese Sandwich");
+		JMenuItem BTLSandwich = new JMenuItem("BLT Sandwich");
+		JMenuItem TripleClubSandwich = new JMenuItem("TripleClub Sandwich");
+		JMenuItem ChickenTenderMelt = new JMenuItem("Chicken Tender Melt");
+		JMenuItem HamCheeseSandwich = new JMenuItem("Ham & Cheese Sandwich");
 		Sandwiches.add(BTLSandwich);
 		Sandwiches.add(TripleClubSandwich);
 		Sandwiches.add(ChickenTenderMelt);
 		Sandwiches.add(HamCheeseSandwich);
 
-		//Pie menu
+		// Pie menu
 		JMenuItem pie = new JMenuItem("Pie");
-		
-		//Sides menu
+
+		// Sides menu
 
 		ButtonGroup sides = new ButtonGroup();
 		JRadioButtonMenuItem chips = new JRadioButtonMenuItem("Potato Chips");
@@ -110,7 +110,6 @@ public class Menu {
 		JRadioButtonMenuItem corn = new JRadioButtonMenuItem("Corn");
 		JRadioButtonMenuItem greenbeans = new JRadioButtonMenuItem("Greenbeans");
 		JRadioButtonMenuItem mashedpotatoes = new JRadioButtonMenuItem("Mashed Potatoes");
-
 
 		sides.add(chips);
 		sides.add(bakedpotato);
@@ -138,11 +137,8 @@ public class Menu {
 		maincourse.add(corn);
 		maincourse.add(greenbeans);
 
-
-
 		// Desserts
 		// This is to display the CheckBoxMenuItem
-
 
 		JCheckBoxMenuItem sorbet = new JCheckBoxMenuItem("Sorbet");
 		JMenu icecream = new JMenu("Ice Cream");
@@ -154,8 +150,17 @@ public class Menu {
 		desserts.add(sorbet);
 		desserts.add(icecream);
 
-		return menuBar;
-		}
-	
-}
+		back.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JPanel back = Inventory.newJPanel();
+				Main.frame.setContentPane(back);
+				Main.frame.invalidate();
+				Main.frame.validate();
+			}
+		});
 
+		return menuBar;
+	}
+
+}

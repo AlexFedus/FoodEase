@@ -11,6 +11,7 @@ public class Orders extends JPanel {
      * Sets up JPanel for the Orders view that can be accessed from the homepage.
      * Delete Order Button has to be implemented.
      * New Order Button does not add orders to FoodQueue.
+     * 
      * @return JPanel
      */
     public static JPanel newJPanel() {
@@ -18,21 +19,31 @@ public class Orders extends JPanel {
         orders.setLayout(new GridLayout(3, 1));
 
         // Buttons are created then added to the JPanel
-        JButton button = new JButton("Home");
-        JButton button1 = new JButton("New Order");
-        JButton button2 = new JButton("Delete Order");
+        JButton Home = new JButton("Home");
+        JButton newOrder = new JButton("New Order");
+        JButton editOrder = new JButton("Edit Order");
+        JButton deleteOrder = new JButton("Delete Order");
+
         JPanel top = new JPanel();
-        top.add(button);
-        orders.add(top);
         JPanel middle = new JPanel();
-        middle.add(button1);
-        orders.add(middle);
         JPanel bottom = new JPanel();
-        bottom.add(button2);
+
+        JLabel ordersLabel = new JLabel("Orders");
+        JLabel displayOrders = new JLabel(Main.FoodQueue.toString());
+
+        top.add(Home);
+        middle.add(newOrder);
+        middle.add(editOrder);
+        middle.add(deleteOrder);
+        bottom.add(ordersLabel);
+        bottom.add(displayOrders);
+
+        orders.add(top);
+        orders.add(middle);
         orders.add(bottom);
 
-        // Home button is given action listener to change frame back to homepage.
-        button.addActionListener(new ActionListener() {
+        // Home is given action listener to change frame back to homepage.
+        Home.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,14 +55,68 @@ public class Orders extends JPanel {
 
         });
         // New Order Button is given action listener to change frame to Orderview.
-        button1.addActionListener(new ActionListener() {
+        newOrder.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JPanel orderView = OrderView.newJPanel();
+                JPanel orderView = NewOrderView.newJPanel();
                 Main.frame.setContentPane(orderView);
                 Main.frame.invalidate();
                 Main.frame.validate();
+            }
+        });
+
+        // Edit Order Button is given action listener to change frame to Orderview.
+        editOrder.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        // Delete Order Button is given action listener to change frame to Orderview.
+        deleteOrder.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel deleteView = new JPanel(new FlowLayout());
+
+                JLabel number = new JLabel("Table Number:");
+                JTextField tableNumber = new JTextField(30);
+                JButton Delete = new JButton("Delete");
+                JButton back = new JButton("Back");
+
+                deleteView.add(number);
+                deleteView.add(tableNumber);
+                deleteView.add(Delete);
+                deleteView.add(back);
+
+                Main.frame.setContentPane(deleteView);
+                Main.frame.invalidate();
+                Main.frame.validate();
+
+                Delete.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        String num = tableNumber.getText();
+                        Main.FoodQueue.remove(Integer.valueOf(num));
+
+                        JPanel orders = Orders.newJPanel();
+                        Main.frame.setContentPane(orders);
+                        Main.frame.invalidate();
+                        Main.frame.validate();
+                    }
+                });
+
+                back.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        JPanel back = Orders.newJPanel();
+                        Main.frame.setContentPane(back);
+                        Main.frame.invalidate();
+                        Main.frame.validate();
+                    }
+                });
             }
         });
 

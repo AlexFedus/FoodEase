@@ -1,6 +1,6 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
+import java.awt.*;
 
 /**
  * 
@@ -17,14 +17,21 @@ public class Inventory extends JPanel {
      */
     public static JPanel newJPanel() {
         //Sets up JPanel
-        JPanel inventory = new JPanel();
-        JButton menu = new JButton("Menu");
-        JButton button = new JButton("Home");
-        inventory.add(button);
-        inventory.add(menu);
+        JPanel inventory = new JPanel(new GridLayout(2,1));
+        JPanel top = new JPanel();
+        JPanel bottom = new JPanel();
 
-        //ActionListener to return to home page when Home button is clicked
-        button.addActionListener(new ActionListener(){
+        JButton menu = new JButton("Menu");
+        JButton Home = new JButton("Home");
+        JButton manage = new JButton("Inventory Management");
+        top.add(Home);
+        bottom.add(menu);
+        bottom.add(manage);
+        inventory.add(top);
+        inventory.add(bottom);
+
+        //ActionListener to return to home page when Home Home is clicked
+        Home.addActionListener(new ActionListener(){
 
             @Override
             public void actionPerformed(ActionEvent e) {

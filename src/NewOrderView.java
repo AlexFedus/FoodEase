@@ -3,39 +3,37 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * This class contains the method responsible for the Orderview's JPanel inside
- * of the Orders view.
+ * This class contains the method responsible for the NewOrderView's JPanel accessed by the Orders view.
  */
-public class OrderView extends JPanel {
-    // Creates String[] to add to FoodQueue in Main class.
-    static String[] orderInfo = new String[5];
-
+public class NewOrderView extends JPanel {
     /**
-     * Sets up JPanel for Orderview that can be accessed from the Order's view from
+     * Sets up JPanel for NewOrderView that can be accessed from the Order's view from
      * the homepage.
      * 
      * @return JPanel
      */
     public static JPanel newJPanel() {
-        JPanel orders = new JPanel();
-        orders.setLayout(new FlowLayout());
+        JPanel orders = new JPanel(new FlowLayout());
 
-        // Creates and Labels, Buttons, and JTextFields and adds them to the JPanel.
+        // Creates Buttons, Labels, and JTextFields and adds them to the JPanel.
         JButton back = new JButton("Back");
-        JLabel text = new JLabel("Enter Table Number:");
-        JTextField tableNum = new JTextField(30);
-
-        JLabel text1 = new JLabel("Meal 1:");
-        JTextField Meal1 = new JTextField(40);
-        JLabel text2 = new JLabel("Meal 2:");
-        JTextField Meal2 = new JTextField(40);
-        JLabel text3 = new JLabel("Meal 3:");
-        JTextField Meal3 = new JTextField(40);
-        JLabel text4 = new JLabel("Meal 4:");
-        JTextField Meal4 = new JTextField(40);
-        JLabel text5 = new JLabel("Meal 5:");
-        JTextField Meal5 = new JTextField(40);
         JButton submit = new JButton("Finish");
+        
+        
+        JLabel text = new JLabel("Enter Table Number:");
+        JLabel text1 = new JLabel("Meal 1:");
+        JLabel text2 = new JLabel("Meal 2:");
+        JLabel text3 = new JLabel("Meal 3:");
+        JLabel text4 = new JLabel("Meal 4:");
+        JLabel text5 = new JLabel("Meal 5:");
+
+        JTextField tableNum = new JTextField(30);
+        JTextField Meal1 = new JTextField(40);
+        JTextField Meal2 = new JTextField(40);
+        JTextField Meal3 = new JTextField(40);
+        JTextField Meal4 = new JTextField(40);
+        JTextField Meal5 = new JTextField(40);
+
         orders.add(text);
         orders.add(tableNum);
         orders.add(text1);
@@ -56,14 +54,11 @@ public class OrderView extends JPanel {
         submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                orderInfo[0] = (tableNum.getText());
-                orderInfo[1] = (Meal1.getText());
-                orderInfo[2] = (Meal2.getText());
-                orderInfo[3] = (Meal3.getText());
-                orderInfo[4] = (Meal4.getText());
-                orderInfo[5] = (Meal5.getText());
-                Main.FoodQueue.add(orderInfo);
-                System.out.println(orderInfo[0] + orderInfo[1]);
+                Integer num = Integer.valueOf(tableNum.getText());
+                String meals = String.format("%s, %s, %s, %s, %s", Meal1.getText(),Meal2.getText(),Meal3.getText(),Meal4.getText(),Meal5.getText());
+                Main.FoodQueue.put(num, meals);
+                Main.frame.invalidate();
+                Main.frame.validate();
             }
         });
 

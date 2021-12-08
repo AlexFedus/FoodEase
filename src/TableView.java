@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
  * This class contains the method responsible for the TableView Jpanel
  */
 public class TableView extends JPanel {
-    static String status = "";
 
     /**
      * Sets up JPanel for each of the tables and can be used to change availability
@@ -16,29 +15,35 @@ public class TableView extends JPanel {
      * @return JPanel
      */
     public static JPanel newJPanel() {
-        JPanel tables = new JPanel();
-        tables.setLayout(new GridLayout(5, 2));
-        JButton button = new JButton("Back");
-        JLabel availability = new JLabel("Set Availability:", SwingConstants.CENTER);
-        availability.setFont(new Font("Serif", Font.PLAIN, 20));
-
-        JButton submit = new JButton("Submit");
+        JPanel tables = new JPanel(new GridLayout(3, 1));
+        JPanel top = new JPanel();
+        JPanel middle = new JPanel();
+        JPanel bottom = new JPanel();
         String[] choices = {
-                "Available", "Occupied"
+            "Available", "Occupied"
         };
-
+        JButton back = new JButton("Back");
+        JButton submit = new JButton("Submit");
         JComboBox choose = new JComboBox(choices);
-        JLabel currentStatus = new JLabel("Current Status: " + status, SwingConstants.CENTER);
+        JTextField tableNum = new JTextField(30);
 
+        JLabel table = new JLabel("Table Number:");
+        JLabel availability = new JLabel("Set Availability:");
+       
         // Adds buttons to JPanel
-        tables.add(button);
-        tables.add(availability);
-        tables.add(choose);
-        tables.add(submit);
-        tables.add(currentStatus);
+        top.add(back);
+        middle.add(availability);
+        middle.add(choose);
+        middle.add(table);
+        middle.add(tableNum);
+        bottom.add(submit);
+
+        tables.add(top);
+        tables.add(middle);
+        tables.add(bottom);
 
         // ActionListener to go 'back'/ to the Tables Jpanel
-        button.addActionListener(new ActionListener() {
+        back.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -56,14 +61,17 @@ public class TableView extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                String s = (String) choose.getSelectedItem();
-
-                if (s == "Available") {
-                    status = "Available";
-                } else {
-                    status = "Occupied";
+                String status = String.valueOf(choose.getSelectedItem());
+                if (!status.equals("Available")){
+                    Tables.tableStatus.put(Integer.valueOf(tableNum.getText()),status);
                 }
-
+                else{
+                    Tables.tableStatus.remove(Integer.valueOf(tableNum.getText()));
+                }
+                JPanel back = Tables.newJPanel();
+                Main.frame.setContentPane(back);
+                Main.frame.invalidate();
+                Main.frame.validate();
             }
 
         });

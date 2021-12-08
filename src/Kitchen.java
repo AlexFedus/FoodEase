@@ -12,33 +12,35 @@ public class Kitchen extends JPanel {
     /**
      * Sets up the kitchen Jpanel that can be accessed from the homepage
      * Button to Finish Order is Not Working.
+     * 
      * @return JPanel
      */
     public static JPanel newJPanel() {
         JPanel kitchen = new JPanel(new GridLayout(3, 1));
-        JButton button = new JButton("Home");
-        JButton button1 = new JButton("Finish Order");
-        JLabel tableNum = new JLabel("Table Number");
-        JTextField finishedOrder = new JTextField(20);
+        JPanel top = new JPanel();
         JPanel middle = new JPanel();
         JPanel bottom = new JPanel();
 
-        kitchen.add(button);
-        middle.add(button1);
-        middle.add(tableNum);
-        middle.add(finishedOrder);
+        JButton Home = new JButton("Home");
+        JButton finishOrder = new JButton("Finish Order");
+        JLabel table = new JLabel("Table Number");
+        JLabel orderLabel = new JLabel("Orders:");
+        JLabel orders = new JLabel(Main.FoodQueue.toString());
+        JTextField tableNumber = new JTextField(20);
+
+        top.add(Home);
+        middle.add(finishOrder);
+        middle.add(table);
+        middle.add(tableNumber);
+        bottom.add(orderLabel);
+        bottom.add(orders);
+
+        kitchen.add(top);
         kitchen.add(middle);
-        
-        //Display current orders in FoodQueue.
-        //Currently Not working due to other problems.
-        for (String[] order : Main.FoodQueue) {
-            JLabel label = new JLabel(order[0]);
-            bottom.add(label);
-        }
         kitchen.add(bottom);
 
-        // ActionListener to return to home page when Home button is clicked
-        button.addActionListener(new ActionListener() {
+        // ActionListener to return to home page when Home Home is clicked
+        Home.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,17 +48,21 @@ public class Kitchen extends JPanel {
                 Main.frame.setContentPane(home);
                 Main.frame.invalidate();
                 Main.frame.validate();
-
             }
 
         });
-        //ActionListener to finish an Order selected by table Number. 
-        button1.addActionListener(new ActionListener() {
+
+        // ActionListener to finish an Order selected by table Number.
+        finishOrder.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                String num = finishedOrder.getText();
-                
+                String num = tableNumber.getText();
+                Main.FoodQueue.remove(Integer.valueOf(num));
+                JPanel kitchen = Kitchen.newJPanel();
+                Main.frame.setContentPane(kitchen);
+                Main.frame.invalidate();
+                Main.frame.validate();
             }
 
         });

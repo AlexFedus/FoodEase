@@ -10,7 +10,7 @@ public class Main extends JFrame {
     public static JFrame frame;
     // Creates Food Queue to be accessed by other classes.
     // Currently Not Working
-    public static List<String[]> FoodQueue = new LinkedList<String[]>();
+    public static Hashtable<Integer, String> FoodQueue = new Hashtable<>();
 
     /**
      * Launches the main JFrame that the whole program is ran on.

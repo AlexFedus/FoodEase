@@ -22,6 +22,7 @@ public class HomePage extends JPanel{
     public static JPanel newJPanel(){
         //Sets up JPanel
         JPanel content = new JPanel();
+        JPanel subPanel = new JPanel();
         content.setLayout(new BorderLayout());
         content.setBackground(Color.GRAY);
 
@@ -31,7 +32,9 @@ public class HomePage extends JPanel{
         JButton kitchen= new JButton("Kitchen");
         JButton inventory = new JButton("Inventory");
 
-        content.add(clockIn, BorderLayout.NORTH);
+        subPanel.add(clockIn);
+        subPanel.add(empMan);
+        content.add(subPanel, BorderLayout.NORTH);
         content.add(tables, BorderLayout.CENTER);
         content.add(orders, BorderLayout.WEST);
         content.add(kitchen, BorderLayout.EAST);
@@ -49,6 +52,20 @@ public class HomePage extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JPanel clock = Clock.newJPanel();
+                Main.frame.setContentPane(clock);
+                Main.frame.invalidate();
+                Main.frame.validate();
+                
+            }
+
+        });
+        
+        //ActionListener for Employee Management button
+        empMan.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JPanel empMan = EmployeeManagement.newJPanel();
                 Main.frame.setContentPane(clock);
                 Main.frame.invalidate();
                 Main.frame.validate();

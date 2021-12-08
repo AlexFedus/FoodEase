@@ -67,7 +67,7 @@ public class HomePage extends JPanel{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JPanel empMan = EmployeeManagement.newJPanel();
-                Main.frame.setContentPane(clock);
+                Main.frame.setContentPane(empMan);
                 Main.frame.invalidate();
                 Main.frame.validate();
                 

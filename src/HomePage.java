@@ -27,6 +27,7 @@ public class HomePage extends JPanel{
         content.setBackground(Color.GRAY);
 
         JButton clockIn = new JButton("Clock In/Clock Out");
+        JButton empMan = new JButton("Add/Delete Employee");
         JButton tables= new JButton("Table View");
         JButton orders = new JButton("Orders");
         JButton kitchen= new JButton("Kitchen");

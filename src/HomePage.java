@@ -27,7 +27,7 @@ public class HomePage extends JPanel {
         JPanel southPanel = new JPanel();
 
         content.setBackground(Color.BLACK);
-        JLabel title = new JLabel("Food-Ease Restaraunt System");
+        JLabel title = new JLabel("Food-Ease Restaurant System");
         title.setFont(new Font("Seref", 2, 30));
         JButton clockIn = new JButton("Clock In/Clock Out");
         JButton empMan = new JButton("Add/Delete Employee");

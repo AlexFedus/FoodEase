@@ -10,8 +10,7 @@ import java.awt.*;
  */
 public class Tables extends JPanel {
 
-    
-    /** 
+    /**
      * Sets up the JPanels for table view that can be accessed from the homepage
      * 
      * @return JPanel
@@ -20,7 +19,7 @@ public class Tables extends JPanel {
         JPanel tables = new JPanel();
         tables.setLayout(new FlowLayout());
 
-        //Adds buttons for home and each table
+        // Adds buttons for home and each table
         JButton button = new JButton("Home");
         JButton table1 = new JButton("1");
         JButton table2 = new JButton("2");
@@ -48,7 +47,7 @@ public class Tables extends JPanel {
         JButton table24 = new JButton("24");
         JButton table25 = new JButton("25");
 
-        //Adds buttons to the JPanel
+        // Adds buttons to the JPanel
         tables.add(button);
         tables.add(table1);
         tables.add(table2);
@@ -76,30 +75,24 @@ public class Tables extends JPanel {
         tables.add(table24);
         tables.add(table25);
 
-        
-    
-
-
         /**
          * Below is all the actionListeners for the home button and for each table
          */
-        
 
-        button.addActionListener(new ActionListener(){
+        button.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-            JPanel home = HomePage.newJPanel();
-            Main.frame.setContentPane(home);
-            Main.frame.invalidate();
-            Main.frame.validate();
-                
+                JPanel home = HomePage.newJPanel();
+                Main.frame.setContentPane(home);
+                Main.frame.invalidate();
+                Main.frame.validate();
+
             }
-            
+
         });
 
-
-        table1.addActionListener(new ActionListener(){
+        table1.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -107,12 +100,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table2.addActionListener(new ActionListener(){
+        table2.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -120,12 +113,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table3.addActionListener(new ActionListener(){
+        table3.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -133,12 +126,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table4.addActionListener(new ActionListener(){
+        table4.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -146,12 +139,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table5.addActionListener(new ActionListener(){
+        table5.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -159,12 +152,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table6.addActionListener(new ActionListener(){
+        table6.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -172,12 +165,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table7.addActionListener(new ActionListener(){
+        table7.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -185,12 +178,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table8.addActionListener(new ActionListener(){
+        table8.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -198,12 +191,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table9.addActionListener(new ActionListener(){
+        table9.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -211,12 +204,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table10.addActionListener(new ActionListener(){
+        table10.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -224,12 +217,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table11.addActionListener(new ActionListener(){
+        table11.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -237,12 +230,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table12.addActionListener(new ActionListener(){
+        table12.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -250,12 +243,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table13.addActionListener(new ActionListener(){
+        table13.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -263,12 +256,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table14.addActionListener(new ActionListener(){
+        table14.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -276,12 +269,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table15.addActionListener(new ActionListener(){
+        table15.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -289,12 +282,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table16.addActionListener(new ActionListener(){
+        table16.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -302,12 +295,12 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
 
-        table17.addActionListener(new ActionListener(){
+        table17.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -315,11 +308,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table18.addActionListener(new ActionListener(){
+        table18.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -327,11 +320,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table19.addActionListener(new ActionListener(){
+        table19.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -339,11 +332,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table20.addActionListener(new ActionListener(){
+        table20.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -351,11 +344,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table21.addActionListener(new ActionListener(){
+        table21.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -363,11 +356,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table22.addActionListener(new ActionListener(){
+        table22.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -375,11 +368,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table23.addActionListener(new ActionListener(){
+        table23.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -387,11 +380,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table24.addActionListener(new ActionListener(){
+        table24.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -399,11 +392,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
-        table25.addActionListener(new ActionListener(){
+        table25.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -411,14 +404,11 @@ public class Tables extends JPanel {
                 Main.frame.setContentPane(table1View);
                 Main.frame.setContentPane(table1View);
                 Main.frame.validate();
-                
+
             }
 
         });
- 
-
-
 
         return tables;
     }
- }
+}

@@ -2,13 +2,25 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/**
+ * This class contains the method responsible for the Orderview's JPanel inside
+ * of the Orders view.
+ */
 public class OrderView extends JPanel {
+    // Creates String[] to add to FoodQueue in Main class.
     static String[] orderInfo = new String[5];
 
+    /**
+     * Sets up JPanel for Orderview that can be accessed from the Order's view from
+     * the homepage.
+     * 
+     * @return JPanel
+     */
     public static JPanel newJPanel() {
         JPanel orders = new JPanel();
         orders.setLayout(new FlowLayout());
 
+        // Creates and Labels, Buttons, and JTextFields and adds them to the JPanel.
         JButton back = new JButton("Back");
         JLabel text = new JLabel("Enter Table Number:");
         JTextField tableNum = new JTextField(30);
@@ -39,6 +51,8 @@ public class OrderView extends JPanel {
         orders.add(submit);
         orders.add(back);
 
+        // Submit Button is given action listener to add the new Order to FoodQueue in
+        // Main Class.
         submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,8 +62,12 @@ public class OrderView extends JPanel {
                 orderInfo[3] = (Meal3.getText());
                 orderInfo[4] = (Meal4.getText());
                 orderInfo[5] = (Meal5.getText());
+                Main.FoodQueue.add(orderInfo);
+                System.out.println(orderInfo[0] + orderInfo[1]);
             }
         });
+
+        // Back Button is given action listener to change the frame back to Orders view.
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -9,15 +9,15 @@ import java.awt.*;
  */
 public class Inventory extends JPanel {
 
-    
-    /** 
-     * Sets up the JPanel for the Inventory tab that can be accessed from the hompeage
+    /**
+     * Sets up the JPanel for the Inventory tab that can be accessed from the
+     * hompeage
      * 
      * @return JPanel
      */
     public static JPanel newJPanel() {
-        //Sets up JPanel
-        JPanel inventory = new JPanel(new GridLayout(2,1));
+        // Sets up JPanel
+        JPanel inventory = new JPanel(new GridLayout(2, 1));
         JPanel top = new JPanel();
         JPanel bottom = new JPanel();
 
@@ -30,33 +30,42 @@ public class Inventory extends JPanel {
         inventory.add(top);
         inventory.add(bottom);
 
-        //ActionListener to return to home page when Home Home is clicked
-        Home.addActionListener(new ActionListener(){
+        // ActionListener to return to home page when Home Home is clicked
+        Home.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-            JPanel home = HomePage.newJPanel();
-            Main.frame.setContentPane(home);
-            Main.frame.invalidate();
-            Main.frame.validate();
-                
-            }
-            
-        });
+                JPanel home = HomePage.newJPanel();
+                Main.frame.setContentPane(home);
+                Main.frame.invalidate();
+                Main.frame.validate();
 
+            }
+
+        });
+        // Action listener for menu button to change view to Menu.
         menu.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JMenuBar menu = Menu.newJMenuBar();
-				Main.frame.setContentPane(menu);
-				Main.frame.invalidate();
-				Main.frame.validate();
-				
-			}
-        	
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JMenuBar menu = Menu.newJMenuBar();
+                Main.frame.setContentPane(menu);
+                Main.frame.invalidate();
+                Main.frame.validate();
+
+            }
+
+        });
+
+        // Action listener for manage button to manage inventory.
+        // still Needs implemented
+        manage.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            }
         });
 
         return inventory;
     }
- }
+}

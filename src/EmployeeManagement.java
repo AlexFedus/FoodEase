@@ -77,7 +77,7 @@ public class EmployeeManagement extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JPanel emps = new JPanel(new GridLayout(2,1));
+                JPanel emps = new JPanel(new GridLayout(2, 1));
                 JPanel top = new JPanel();
                 JPanel bottom = new JPanel();
                 JLabel workerIds = new JLabel(employeeList.toString());

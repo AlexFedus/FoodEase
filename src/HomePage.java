@@ -12,15 +12,15 @@ import java.awt.event.ActionListener;
  * This class contains the method responsible for the home page Jpanel
  * 
  */
-public class HomePage extends JPanel{
-    
-    /** 
+public class HomePage extends JPanel {
+
+    /**
      * Sets up the JPanel for the homepage of the project
      * 
      * @return JPanel
      */
-    public static JPanel newJPanel(){
-        //Sets up JPanel
+    public static JPanel newJPanel() {
+        // Sets up JPanel
         JPanel content = new JPanel();
         JPanel subPanel = new JPanel();
         content.setLayout(new BorderLayout());
@@ -28,9 +28,9 @@ public class HomePage extends JPanel{
 
         JButton clockIn = new JButton("Clock In/Clock Out");
         JButton empMan = new JButton("Add/Delete Employee");
-        JButton tables= new JButton("Table View");
+        JButton tables = new JButton("Table View");
         JButton orders = new JButton("Orders");
-        JButton kitchen= new JButton("Kitchen");
+        JButton kitchen = new JButton("Kitchen");
         JButton inventory = new JButton("Inventory");
 
         subPanel.add(clockIn);
@@ -41,13 +41,12 @@ public class HomePage extends JPanel{
         content.add(kitchen, BorderLayout.EAST);
         content.add(inventory, BorderLayout.SOUTH);
 
-        //Adds content to the JPanel
+        // Adds content to the JPanel
         Main.frame.add(content);
         Main.frame.setLocation(200, 200);
         Main.frame.setVisible(true);
 
-
-        //ActionListener for clock button
+        // ActionListener for clock button
         clockIn.addActionListener(new ActionListener() {
 
             @Override
@@ -56,12 +55,12 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(clock);
                 Main.frame.invalidate();
                 Main.frame.validate();
-                
+
             }
 
         });
-        
-        //ActionListener for Employee Management button
+
+        // ActionListener for Employee Management button
         empMan.addActionListener(new ActionListener() {
 
             @Override
@@ -70,13 +69,13 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(empMan);
                 Main.frame.invalidate();
                 Main.frame.validate();
-                
+
             }
 
         });
-        
+
         // ActionListener for inventory button
-        inventory.addActionListener(new ActionListener(){
+        inventory.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -84,13 +83,13 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(inventory);
                 Main.frame.invalidate();
                 Main.frame.validate();
-     
+
             }
-    
+
         });
 
-        //ActionListener for Kitchen button
-        kitchen.addActionListener(new ActionListener(){
+        // ActionListener for Kitchen button
+        kitchen.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -98,13 +97,13 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(kitchen);
                 Main.frame.invalidate();
                 Main.frame.validate();
-     
+
             }
-    
+
         });
 
-        //ActionListener for orders button
-        orders.addActionListener(new ActionListener(){
+        // ActionListener for orders button
+        orders.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -112,13 +111,13 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(orders);
                 Main.frame.invalidate();
                 Main.frame.validate();
-     
+
             }
-    
+
         });
 
-        //ActionListener for tables button
-        tables.addActionListener(new ActionListener(){
+        // ActionListener for tables button
+        tables.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -126,9 +125,9 @@ public class HomePage extends JPanel{
                 Main.frame.setContentPane(tables);
                 Main.frame.invalidate();
                 Main.frame.validate();
-     
+
             }
-    
+
         });
 
         return content;

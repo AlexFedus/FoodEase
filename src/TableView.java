@@ -20,7 +20,7 @@ public class TableView extends JPanel {
         JPanel middle = new JPanel();
         JPanel bottom = new JPanel();
         String[] choices = {
-            "Available", "Occupied"
+                "Available", "Occupied"
         };
         JButton back = new JButton("Back");
         JButton submit = new JButton("Submit");
@@ -29,7 +29,7 @@ public class TableView extends JPanel {
 
         JLabel table = new JLabel("Table Number:");
         JLabel availability = new JLabel("Set Availability:");
-       
+
         // Adds buttons to JPanel
         top.add(back);
         middle.add(availability);
@@ -62,10 +62,9 @@ public class TableView extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String status = String.valueOf(choose.getSelectedItem());
-                if (!status.equals("Available")){
-                    Tables.tableStatus.put(Integer.valueOf(tableNum.getText()),status);
-                }
-                else{
+                if (!status.equals("Available")) {
+                    Tables.tableStatus.put(Integer.valueOf(tableNum.getText()), status);
+                } else {
                     Tables.tableStatus.remove(Integer.valueOf(tableNum.getText()));
                 }
                 JPanel back = Tables.newJPanel();

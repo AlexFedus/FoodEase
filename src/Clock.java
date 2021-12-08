@@ -77,7 +77,7 @@ public class Clock extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JPanel CurrentWorkers = new JPanel(new GridLayout(2,1));
+                JPanel CurrentWorkers = new JPanel(new GridLayout(2, 1));
                 JPanel top = new JPanel();
                 JPanel bottom = new JPanel();
                 JLabel workerIds = new JLabel(currentWorking.toString());

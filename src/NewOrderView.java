@@ -3,11 +3,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * This class contains the method responsible for the NewOrderView's JPanel accessed by the Orders view.
+ * This class contains the method responsible for the NewOrderView's JPanel
+ * accessed by the Orders view.
  */
 public class NewOrderView extends JPanel {
     /**
-     * Sets up JPanel for NewOrderView that can be accessed from the Order's view from
+     * Sets up JPanel for NewOrderView that can be accessed from the Order's view
+     * from
      * the homepage.
      * 
      * @return JPanel
@@ -18,8 +20,7 @@ public class NewOrderView extends JPanel {
         // Creates Buttons, Labels, and JTextFields and adds them to the JPanel.
         JButton back = new JButton("Back");
         JButton submit = new JButton("Finish");
-        
-        
+
         JLabel text = new JLabel("Enter Table Number:");
         JLabel text1 = new JLabel("Meal 1:");
         JLabel text2 = new JLabel("Meal 2:");
@@ -55,7 +56,8 @@ public class NewOrderView extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Integer num = Integer.valueOf(tableNum.getText());
-                String meals = String.format("%s, %s, %s, %s, %s", Meal1.getText(),Meal2.getText(),Meal3.getText(),Meal4.getText(),Meal5.getText());
+                String meals = String.format("%s, %s, %s, %s, %s", Meal1.getText(), Meal2.getText(), Meal3.getText(),
+                        Meal4.getText(), Meal5.getText());
                 Main.FoodQueue.put(num, meals);
                 Main.frame.invalidate();
                 Main.frame.validate();

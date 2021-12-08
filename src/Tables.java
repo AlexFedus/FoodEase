@@ -32,7 +32,7 @@ public class Tables extends JPanel {
         top.add(Home);
         middle.add(availability);
         bottom.add(status);
-        
+
         tables.add(top);
         tables.add(middle);
         tables.add(bottom);

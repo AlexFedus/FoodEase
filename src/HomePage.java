@@ -1,11 +1,10 @@
 //DO NOT ALTER
 
-import javax.swing.JButton;
-import javax.swing.JPanel;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+
+import java.awt.*;
+import java.awt.event.*;
 
 /**
  * 
@@ -21,25 +20,34 @@ public class HomePage extends JPanel {
      */
     public static JPanel newJPanel() {
         // Sets up JPanel
-        JPanel content = new JPanel();
-        JPanel subPanel = new JPanel();
-        content.setLayout(new BorderLayout());
-        content.setBackground(Color.GRAY);
+        JPanel content = new JPanel(new BorderLayout());
+        JPanel northPanel = new JPanel();
+        JPanel westPanel = new JPanel(new GridLayout(2,1));
+        JPanel eastPanel = new JPanel(new GridLayout(2,1));
+        JPanel southPanel = new JPanel();
 
+        content.setBackground(Color.BLACK);
+        JLabel title = new JLabel("Food-Ease Restaraunt System");
+        title.setFont(new Font("Seref", 2, 30));
         JButton clockIn = new JButton("Clock In/Clock Out");
         JButton empMan = new JButton("Add/Delete Employee");
         JButton tables = new JButton("Table View");
-        JButton orders = new JButton("Orders");
-        JButton kitchen = new JButton("Kitchen");
+        JButton orders = new JButton("           Orders           ");
+        JButton kitchen = new JButton("  Kitchen  ");
         JButton inventory = new JButton("Inventory");
 
-        subPanel.add(clockIn);
-        subPanel.add(empMan);
-        content.add(subPanel, BorderLayout.NORTH);
+        northPanel.add(title);
+        westPanel.add(clockIn);
+        westPanel.add(empMan);
+        eastPanel.add(orders);
+        eastPanel.add(kitchen);
+        southPanel.add(inventory);
+
+        content.add(northPanel, BorderLayout.NORTH);
+        content.add(westPanel, BorderLayout.WEST);
         content.add(tables, BorderLayout.CENTER);
-        content.add(orders, BorderLayout.WEST);
-        content.add(kitchen, BorderLayout.EAST);
-        content.add(inventory, BorderLayout.SOUTH);
+        content.add(eastPanel, BorderLayout.EAST);
+        content.add(southPanel, BorderLayout.SOUTH);
 
         // Adds content to the JPanel
         Main.frame.add(content);

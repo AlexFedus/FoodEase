@@ -32,10 +32,7 @@ public class Menu {
 		starter.add(salad);
 
 		// Main Courses
-		// This menu is a little more complex.
-		// We have a sub-menu within the menu,
-		// and have put in a radio-button group for the sideorders.
-		// There is also a Separator down there in line 74
+		//Fish, Steak, Chicken, CheeseBurgers, Skillets, Sandwiches
 
 
 		//Fish Menu
@@ -65,7 +62,7 @@ public class Menu {
 		CheeseBurger.add(medwellburg);
 		CheeseBurger.add(welldoneburg);
 
-		//steak menu
+		//Steak menu
 		JMenu Steak = new JMenu("8oz Sirloin Steak");
 		JMenuItem raresteak = new JMenuItem("Rare");
 		JMenuItem medraresteak = new JMenuItem("Medium-Rare");
@@ -78,7 +75,7 @@ public class Menu {
 		Steak.add(medwellsteak);
 		Steak.add(welldonesteak);
 
-		//skillet menu
+		//Skillet menu
 		JMenu Skillets = new JMenu("Breakfast/Lunch/Dinner Skillets");
 		JMenuItem countryskillet = new JMenuItem("Country Skillet");
 		JMenuItem everythingskillet = new JMenuItem("Everything Skillet");
@@ -89,7 +86,7 @@ public class Menu {
 		Skillets.add(steakskillet);
 		Skillets.add(shrimpskillet);
 
-		//sandwich menu
+		//Sandwich menu
 		JMenu Sandwiches = new JMenu("Sandwiches");
 		JMenuItem BTLSandwich =  new JMenuItem("BLT Sandwich");
 		JMenuItem TripleClubSandwich =  new JMenuItem("TripleClub Sandwich");
@@ -100,8 +97,10 @@ public class Menu {
 		Sandwiches.add(ChickenTenderMelt);
 		Sandwiches.add(HamCheeseSandwich);
 
-		//pie menu
+		//Pie menu
 		JMenuItem pie = new JMenuItem("Pie");
+		
+		//Sides menu
 
 		ButtonGroup sides = new ButtonGroup();
 		JRadioButtonMenuItem chips = new JRadioButtonMenuItem("Potato Chips");
@@ -143,7 +142,6 @@ public class Menu {
 
 		// Desserts
 		// This is to display the CheckBoxMenuItem
-		// and another SubMenu with more CheckBoxes in it.
 
 
 		JCheckBoxMenuItem sorbet = new JCheckBoxMenuItem("Sorbet");

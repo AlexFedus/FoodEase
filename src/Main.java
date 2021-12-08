@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
  * 
- * This class is the main class of the project wiich launches the initial JFrame
+ * This class is the main class of the project which launches the initial JFrame
  * 
  */
 public class Main extends JFrame {

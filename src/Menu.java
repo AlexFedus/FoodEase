@@ -17,7 +17,7 @@ public class Menu {
 		menuBar.add(desserts);
 
 		// Now we want to fill each of the menus.
-		// Starters. This is a simple Menu, with three MenuItems.
+		// Starters. This is a simple Menu, with five MenuItems.
 
 		JMenuItem chickensoup = new JMenuItem("Chicken Soup");
 		JMenuItem tomatosoup = new JMenuItem("Tomato Soup");

@@ -1,1 +1,2 @@
-# Cosc319Project
+# FoodEase
+## Cosc319Project
